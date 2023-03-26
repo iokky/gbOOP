@@ -10,8 +10,8 @@ public class Account
         credit
 
     }
-    
-    public int Number { get; set; }
+    private static int _counter = 1;
+    public int Number { get; private set; }
     public decimal Amount { get; set; }
 
     private AccountType _type;
@@ -46,5 +46,9 @@ public class Account
             }
         }
     }
-
+    public Account()
+    {
+        Number = _counter;
+        _counter++;
+    }
 }

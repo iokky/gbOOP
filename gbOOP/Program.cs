@@ -6,6 +6,8 @@ class Programm
     {
         Account account = new Account();
         account.Type = "credit";
-        Console.WriteLine(account.Type);
+        Console.WriteLine(account.Number);
+        Account account2 = new Account();
+        Console.WriteLine(account2.Number);
     }
 }
