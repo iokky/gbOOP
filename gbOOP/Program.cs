@@ -4,10 +4,9 @@ class Programm
 {
     static void Main(string[] args)
     {
-        Account account = new Account();
-        account.Type = "credit";
-        Console.WriteLine(account.Number);
-        Account account2 = new Account();
-        Console.WriteLine(account2.Number);
+        Account account = new Account("credit", 12);
+        account.Deposit(100);
+        account.Withdraw(113);
+        account.GetAccountInfo();
     }
 }
