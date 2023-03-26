@@ -10,22 +10,11 @@ public class Account
         credit
 
     }
-
-    private int _number;
-    private decimal _amount;
-    private AccountType _type;
     
-    public int Number
-    {
-        get { return _number; }
-        set { _number = value; }
-    }
+    public int Number { get; set; }
+    public decimal Amount { get; set; }
 
-    public decimal Amount
-    {
-        get { return _amount;  }
-        set { _amount = value; }
-    }
+    private AccountType _type;
 
     public string Type
     {
