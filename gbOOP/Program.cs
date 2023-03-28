@@ -1,4 +1,6 @@
 ﻿using gbOOP.ls2;
+using System.Text;
+
 
 class Programm
 {
@@ -6,4 +8,6 @@ class Programm
     {
 
     }
+
+
 }
