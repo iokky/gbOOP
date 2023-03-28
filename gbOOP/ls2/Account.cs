@@ -1,6 +1,6 @@
-﻿
-namespace gbOOP.ls2;
+﻿using System.Text.Json;
 
+namespace gbOOP.ls2;
 
 public class Account
 {
@@ -8,11 +8,12 @@ public class Account
     {
         deposit,
         credit
-
     }
     private static int _counter = 1;
-    private int _number;
-    private decimal _amount;
+
+
+    public int _number;
+    public decimal _amount;
 
     private AccountType _type;
 
@@ -31,7 +32,6 @@ public class Account
         SetNumber();
         _amount = amount;
     }
-
     public Account(string type)
     {
         SetNumber();
@@ -55,8 +55,6 @@ public class Account
         _amount = amount;
     }
 
-    public void GetAccountInfo() => Console.WriteLine($"Id:{_number} amoutn:{_amount} type:{_type}");
-
     public void Deposit(decimal deposit)
     {
         _amount += deposit;
@@ -64,9 +62,9 @@ public class Account
         Console.WriteLine($"amount is {_amount}");
     }
 
-    public void Withdraw(decimal withdraw) 
+    public void Withdraw(decimal withdraw)
     {
-        if (_amount - withdraw > -1) 
+        if (_amount - withdraw > -1)
         {
             _amount -= withdraw;
             Console.WriteLine($"withdraw by {withdraw} is complete");
@@ -75,6 +73,15 @@ public class Account
         else
         {
             Console.WriteLine("not enougth credits");
+            Console.WriteLine($"amount is {_amount}");
         }
     }
+
+    public string SaveState()
+    {
+        return JsonSerializer.Serialize(this);
+    }
+
+    public override string ToString() => $"Id:{_number} amoutn:{_amount} type:{_type}";
+
 }
