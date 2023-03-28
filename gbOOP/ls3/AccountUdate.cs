@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace gbOOP.ls3
 {
-    internal class ls3
+    internal class Account
     {
     }
 }
