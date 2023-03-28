@@ -4,6 +4,6 @@ class Programm
 {
     static void Main(string[] args)
     {
-        StringProcessor.ReadContact();
+
     }
 }
