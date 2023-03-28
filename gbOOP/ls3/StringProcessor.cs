@@ -14,15 +14,16 @@ namespace gbOOP.ls3
         public static void ReadContact()
         {
             var data = File.ReadAllLines(@"D:\Development\DotNet\source\repos\gbOOP\gbOOP\ls3\contacts.txt");
-            foreach (var item in data)
+
+            for (int i = 0; i < data.Length; i++)
             {
-                var email = SearchMail(item);
+                var email = SearchMail(ref data[i]);
                 WriteContact(email);
                 Console.WriteLine(email);
             }
         }
 
-        public static string SearchMail(string contact) => contact.Split('&')[1].Trim();
+        public static string SearchMail(ref string contact) => contact.Split('&')[1].Trim();
 
         public static void WriteContact(string email)
         {
