@@ -55,5 +55,5 @@ public class SingleEntranceBuilding : IBuild
     public float GetFloorHeight() => _higth / _floorCount;
     public float GetFloatCountByEntrance() => _flatCount / _entranceCount;
     public float GetFloatCountByFloor() => _flatCount / _floorCount;
-    public override string ToString() => _number.ToString();
+    public override string ToString() => $"SingleEntranceBuilding_#{_number}";
 }

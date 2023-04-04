@@ -1,13 +1,16 @@
 ﻿
 using gbOOP.ls4.Domain;
+using System.Collections;
 
 namespace gbOOP.ls4.Factory
 {
     public class SingleEntranceBuildingFactory : BuildingFactory
     {
-        private float _hight;
-        private int _floorCount;
-        private int _flatCount;
+        private readonly float _hight;
+        private readonly int _floorCount;
+        private readonly int _flatCount;
+
+        private readonly Hashtable _map = new();
 
 
         public SingleEntranceBuildingFactory(float hight, int floorCount, int flatCount)
@@ -17,6 +20,15 @@ namespace gbOOP.ls4.Factory
             _flatCount = flatCount;
         }
 
-        public override IBuild GetBuid() =>  new SingleEntranceBuilding(_hight, _floorCount, _flatCount);
+        public override IBuild GetBuid()
+        {
+            IBuild build =  new SingleEntranceBuilding(_hight, _floorCount, _flatCount);
+            _map.Add(build.GetHashCode(), build);
+            return build;
+        }
+
+        public override Hashtable GetMap() => _map;
+        public override void Remove(int code) => _map.Remove(code);
+
     }
 }
