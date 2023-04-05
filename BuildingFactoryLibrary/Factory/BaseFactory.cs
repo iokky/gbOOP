@@ -1,13 +1,11 @@
-﻿
-
-using gbOOP.ls4.Domain;
+﻿using BuildingFactoryLibrary.Domain;
 using System.Collections;
 
-namespace gbOOP.ls4.Factory;
+
+namespace BuildingFactoryLibrary.Factory;
 
 public class BaseFactory
 {
-
     private static Hashtable _map = new Hashtable();
     private BaseFactory() { }
 
@@ -49,8 +47,6 @@ public class BaseFactory
         _map.Add(build.GetHashCode(), build);
         return build;
     }
-
-
     public static Hashtable GetMap() => _map;
     public static void Remove(int code) => _map.Remove(code);
 }

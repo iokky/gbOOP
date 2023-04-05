@@ -1,4 +1,10 @@
-﻿namespace gbOOP.ls4.Domain;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BuildingFactoryLibrary.Domain;
 
 public class Build
 {

@@ -1,6 +1,6 @@
-﻿namespace gbOOP.ls4.Domain;
+﻿namespace BuildingFactoryLibrary.Domain;
 
-public class MultiEntranceBuilding : IBuild
+public class MultiEntranceBuilding: IBuild
 {
     private static int _id = 1;
     private int _number;
