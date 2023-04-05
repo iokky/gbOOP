@@ -3,7 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gbOOP", "gbOOP\gbOOP.csproj", "{8A9D0E84-AEC4-4256-BD6C-5B3D916AFC2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gbOOP", "gbOOP\gbOOP.csproj", "{8A9D0E84-AEC4-4256-BD6C-5B3D916AFC2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{55134EAC-9A06-4592-A993-920850110F82}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingFactoryLibrary", "BuildingFactoryLibrary\BuildingFactoryLibrary.csproj", "{CA476562-8078-46C0-8B1A-CA2F8C2526E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +22,10 @@ Global
 		{8A9D0E84-AEC4-4256-BD6C-5B3D916AFC2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A9D0E84-AEC4-4256-BD6C-5B3D916AFC2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A9D0E84-AEC4-4256-BD6C-5B3D916AFC2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA476562-8078-46C0-8B1A-CA2F8C2526E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA476562-8078-46C0-8B1A-CA2F8C2526E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA476562-8078-46C0-8B1A-CA2F8C2526E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA476562-8078-46C0-8B1A-CA2F8C2526E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
