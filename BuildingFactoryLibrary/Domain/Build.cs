@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace BuildingFactoryLibrary.Domain;
 
 public class Build
@@ -90,6 +85,11 @@ public class Build
         _floorCount = 1;
         _flatCount = 1;
         _entranceCount = 1;
+    }
+
+    public Build()
+    {
+        SetId();
     }
 
     public float GetFloorHeight() => _higth / _floorCount;
