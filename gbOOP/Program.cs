@@ -1,5 +1,5 @@
 ﻿
-using gbOOP.ls5.Domain;
+using gbOOP.ls5;
 
 class Programm
 {
